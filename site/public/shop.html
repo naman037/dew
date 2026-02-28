@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LUXE | Premium Fashion Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0f49bd",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Georgia", "serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .product-card:hover .quick-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .quick-view {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Sticky Navigation Header -->
+<header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+<!-- Left Navigation -->
+<nav class="hidden md:flex items-center gap-8 flex-1">
+<a class="text-sm font-semibold tracking-wide hover:text-primary transition-colors" href="shop.html">Collections</a>
+<a class="text-sm font-semibold tracking-wide hover:text-primary transition-colors border-b-2 border-primary pb-1" href="shop.html">Shop</a>
+<a class="text-sm font-semibold tracking-wide hover:text-primary transition-colors" href="lookbook.html">Lookbook</a>
+</nav>
+<!-- Centered Logo -->
+<div class="flex items-center justify-center flex-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">flare</span>
+<h1 class="text-2xl font-extrabold tracking-tighter">LUXE</h1>
+</div>
+</div>
+<!-- Right Icons -->
+<div class="flex items-center justify-end gap-6 flex-1">
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex items-center gap-1 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-xs font-bold bg-primary text-white w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b border-slate-200 dark:border-slate-800 pb-8 gap-6">
+<div>
+<h2 class="font-serif text-5xl md:text-6xl text-slate-900 dark:text-slate-100">The Collection</h2>
+<p class="mt-4 text-slate-500 dark:text-slate-400 font-medium uppercase tracking-widest text-xs">128 Products found in Autumn/Winter</p>
+</div>
+<div class="relative group">
+<button class="flex items-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-6 py-3 rounded-lg text-sm font-bold shadow-sm hover:border-primary transition-all">
+<span>Sort by: Recommended</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Sidebar Filter -->
+<aside class="w-full lg:w-64 flex-shrink-0 space-y-10">
+<!-- Categories -->
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest mb-6 border-l-4 border-primary pl-3">Category</h3>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary flex justify-between items-center" href="index.html">Outerwear <span class="text-xs text-slate-400">(24)</span></a></li>
+<li><a class="text-sm font-bold text-primary flex justify-between items-center" href="index.html">Dresses <span class="text-xs text-primary/60">(32)</span></a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary flex justify-between items-center" href="index.html">Knitwear <span class="text-xs text-slate-400">(18)</span></a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary flex justify-between items-center" href="index.html">Tops <span class="text-xs text-slate-400">(45)</span></a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary flex justify-between items-center" href="index.html">Accessories <span class="text-xs text-slate-400">(9)</span></a></li>
+</ul>
+</div>
+<!-- Size Pills -->
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest mb-6 border-l-4 border-primary pl-3">Size</h3>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 text-xs font-bold border border-slate-200 dark:border-slate-800 rounded hover:border-primary hover:text-primary transition-all">XS</button>
+<button class="px-4 py-2 text-xs font-bold border border-slate-200 dark:border-slate-800 rounded hover:border-primary hover:text-primary transition-all">S</button>
+<button class="px-4 py-2 text-xs font-bold bg-primary text-white border border-primary rounded">M</button>
+<button class="px-4 py-2 text-xs font-bold border border-slate-200 dark:border-slate-800 rounded hover:border-primary hover:text-primary transition-all">L</button>
+<button class="px-4 py-2 text-xs font-bold border border-slate-200 dark:border-slate-800 rounded hover:border-primary hover:text-primary transition-all">XL</button>
+</div>
+</div>
+<!-- Color Swatches -->
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest mb-6 border-l-4 border-primary pl-3">Color</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-slate-900 border border-slate-200 shadow-sm outline outline-2 outline-offset-2 outline-primary"></button>
+<button class="w-8 h-8 rounded-full bg-white border border-slate-200 shadow-sm"></button>
+<button class="w-8 h-8 rounded-full bg-[#D4C4B5] border border-slate-200 shadow-sm"></button>
+<button class="w-8 h-8 rounded-full bg-[#2F3E46] border border-slate-200 shadow-sm"></button>
+<button class="w-8 h-8 rounded-full bg-[#8E9775] border border-slate-200 shadow-sm"></button>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="text-sm font-bold uppercase tracking-widest mb-6 border-l-4 border-primary pl-3">Price Range</h3>
+<div class="px-2">
+<div class="h-1 bg-slate-200 dark:bg-slate-800 rounded-full relative">
+<div class="absolute left-0 right-1/4 h-1 bg-primary rounded-full"></div>
+<div class="absolute left-0 w-4 h-4 bg-white border-2 border-primary rounded-full -top-1.5 shadow-md cursor-pointer"></div>
+<div class="absolute right-1/4 w-4 h-4 bg-white border-2 border-primary rounded-full -top-1.5 shadow-md cursor-pointer"></div>
+</div>
+<div class="mt-4 flex justify-between text-xs font-bold text-slate-500">
+<span>$0</span>
+<span>$1,200</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+<!-- Product 1 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Model wearing a long tailored charcoal wool overcoat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXwadxfre5puLb-oGpLY0Kr8Il8qdFE0w_bDhfMxRNSrAgaYRX7whulR6QOUbFZPkMMkD3ApGiWziwbsXHaEEoPmt0-q8MBtF9V8jSp0Bhyhcfr8VsXlnZbfQuj_R_rbN0KUnoW7OtTzD3GzWf1yohHJg_aVMZZF2a-hNJgFJVZy7EDqQ548Z-uEnd7U7XjzyKkODRa77WBY7TT74evMSH3t-yl62cyPqFXe-GUrX8_S1WFvbsECXVKvtnuLk8mdrbSkrWPdQPbF4"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Tailored Wool Overcoat</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Charcoal Grey</p>
+<p class="mt-2 font-bold text-primary">$850.00</p>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Elegant black silk slip dress on model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOC_EWmBYZhM5gxVzAs5Hx78ryQu-ydntBzg0oy1H6h8H3L8dO-MWCcS7AkHV2NCmZ2aOPndH4h4ssMgARfukgqxM-jK0M7zbkOUIZI6_0QIfQHMXNNlvu_uOzi0SUKVzlpzt9cHsHnprBuBAGNCJMhW1oRBrps6bVptZyXJrOZwW4wlhfWOSIhS9aQlIrOW8RAjeL7AKjjr_mhCC2Za7RePoy4goglsE2rEWL1pUKBqKRNiVwdVLOMdO5AQnHYMM-zxbJwfIxgQk"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Silk Slip Dress</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Midnight Black</p>
+<p class="mt-2 font-bold text-primary">$420.00</p>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="High neck beige cashmere sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD81C5IRBd9oJNXqT5OW_AKxdnfdBbCZAqlQMByYYO1h3rpJzyUg_rw-ppbOiUcEIJW_5HhsnULYqVukNp_lAfosLdpWGCCUkX6a9_9rhDeYta-jvkSnC1UiK8cFnr-ttV50B53_SiuOPGDUWS_W4FrxxyJtQ-xTa1UT4h_-nFLUKaSsK5Pk6_-Kk93XvuiY7NNsKkmvtrur8PFx0IYxLwztKMMmFyj6-T8m_67ze0GtqENWacmoHMgKd2sQsxkrSwElu4QIn_SVY4"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Cashmere Turtleneck</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Oatmeal Beige</p>
+<p class="mt-2 font-bold text-primary">$295.00</p>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Straight leg raw denim jeans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kQhkjY0nWzwmLMPDvUOpSJMqSYe-qlXr8ZB4-0vIUxQmxuFvaUdOzWVS6BpbilBqF23F3bEDiHoqhjaA66jWxdYW1G2iNhRRRFpl9TvapHVMrF7ljOrd4WNfwsq2um6P1XRFL7EFQJ0282UFtGG6k1P3MSicQGa7ciRJ1QgHLa7tjfAYR0iuzmt6qjmDmV_iWC7D1g0NAwgJk4W0LYrEAb6he8GsDMKTS-rEXfGEYSJkT0niBNg8GgHLp7bD5TRSlQotuRXE1e8"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Structured Raw Denim</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Indigo Blue</p>
+<p class="mt-2 font-bold text-primary">$180.00</p>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Leather shoulder bag in tan color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHtEIUQZmjRX66Qcb4iJQW_d5OuBoh-pN18-GZT56eo7d4MIAfOUB5g3MtX65cvFGoPoWSlrq2inW07ttuYbasm7SrBUJ5D2e9iKMR59w9p2MqTz-x0QrFS-axY3eDtv-i_Bu6IRUhZdbl_UXsbarTEsuu5dqil-h4HBC1Am65dT8S87_zCeo-DEsaMI0Gv0y20lsMw7LwhTy9uFTRfzmyzMhEKOhwskzESa8irwlQQqldX4w92PYqHfbZckD0i5fWhV8ik1txZKE"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Classic Leather Tote</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Tan Brown</p>
+<p class="mt-2 font-bold text-primary">$550.00</p>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="product-card group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Crisp white cotton poplin shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZXC5mpDh8vqRbSNq59myBOUSwBj_HTfo5dlcY6ockbN_GyoXwiRf7Z6QGh9cgid72B200b_FdepZC4DsId1aVvAboM38j0wqdiJYmWvJ9-qLJJeG6EdU2elY-2_Im80Ub1OImca7IHB0axuvX0lTyk2ZxYMC_ia3fKOrmXb3ami9bHUFVnyGbrEhxlkNEtfM6Q8dDLMF2sIl5r55vS1JRixjuGGHfNGOiL-jvyuFniIP7hcMO6k3iANuStCNIPGoYYUt5ivzO9rw"/>
+<div class="quick-view absolute bottom-4 left-4 right-4">
+<button class="w-full bg-white/90 dark:bg-slate-900/90 py-3 rounded-lg text-sm font-bold shadow-xl backdrop-blur-sm">QUICK VIEW</button>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-base font-semibold text-slate-900 dark:text-slate-100">Poplin Button Down</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Pure White</p>
+<p class="mt-2 font-bold text-primary">$120.00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-base">chevron_left</span> Previous
+                    </button>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold bg-primary text-white">1</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">3</button>
+<span class="px-2">...</span>
+<button class="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">12</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 text-sm font-bold text-slate-900 dark:text-slate-100 hover:text-primary transition-colors">
+                        Next <span class="material-symbols-outlined text-base">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 mt-24 py-16">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="space-y-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl">flare</span>
+<h3 class="text-xl font-extrabold tracking-tighter">LUXE</h3>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 leading-relaxed max-w-xs">
+                        Elevating everyday essentials through conscious design and premium materials. 
+                    </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900 hover:bg-primary/20 transition-colors" href="index.html">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-900 hover:bg-primary/20 transition-colors" href="index.html">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Shopping</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">New Arrivals</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Best Sellers</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Gift Cards</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Sale</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Assistance</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Shipping Policy</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Returns &amp; Exchanges</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Store Locator</a></li>
+<li><a class="text-sm text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="index.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Newsletter</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed">Join for early access to collections and events.</p>
+<form class="flex gap-2">
+<input class="flex-1 bg-slate-100 dark:bg-slate-900 border-none rounded-lg text-sm px-4 focus:ring-1 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="bg-primary text-white px-4 py-2 rounded-lg font-bold text-sm hover:brightness-110 transition-all" type="submit">Join</button>
+</form>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-400">© 2024 LUXE Premium Fashion. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-xs text-slate-400 hover:text-slate-600 transition-colors" href="index.html">Privacy Policy</a>
+<a class="text-xs text-slate-400 hover:text-slate-600 transition-colors" href="index.html">Terms of Service</a>
+<a class="text-xs text-slate-400 hover:text-slate-600 transition-colors" href="index.html">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

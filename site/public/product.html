@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#144bb8",
+              "background-light": "#f6f6f8",
+              "background-dark": "#111621",
+              "neutral-dark": "#1e2636",
+              "border-dark": "#243047",
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Newsreader', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header / TopNavBar -->
+<header class="border-b border-border-dark px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<h1 class="text-2xl font-bold tracking-tight dark:text-white">LUXE</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="shop.html">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="shop.html">Collections</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">About</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Journal</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-neutral-dark/50 rounded-full px-4 py-2 w-64">
+<span class="material-symbols-outlined text-slate-400 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full placeholder:text-slate-500" placeholder="Search" type="text"/>
+</div>
+<div class="flex gap-4">
+<button class="p-2 hover:bg-neutral-dark rounded-full transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<button class="p-2 hover:bg-neutral-dark rounded-full transition-colors relative">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-1 bg-primary text-[10px] w-4 h-4 flex items-center justify-center rounded-full text-white">2</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 md:px-20 py-8">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-sm text-slate-500 mb-8 font-display">
+<a class="hover:text-primary" href="index.html">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary" href="shop.html">Shop</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-slate-900 dark:text-slate-200">Outerwear</span>
+</nav>
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+<!-- Left: Images -->
+<div class="flex flex-col gap-4">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-dark">
+<img alt="Main product view" class="w-full h-full object-cover" data-alt="Professional studio shot of a tailored wool overcoat on a model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPMffNU2Sh1UTJL_UnmuD6KeH0ngryaTEQ42VOGzAusTFsi2w87-IOxU3VRTDvi1LUPaJFu3Y1H1VOIY-smuH8Zmuwplnc1ISGxg7MOKP0hK14uCl8o5DzKBEEGm_3eoaVJlBmT9x66OXVq5uOCLJPzBwyuYpRCQ96M0V2KfXXhzCWThUFYHvwDsuEvIRDijjK-QKpelOrsDQ4CqUHJUiQMQEAkPsnJCsaJCdYFFhssNgueVG1dayiiKJe4XUY12AriBWIaIOpvgo"/>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="aspect-square rounded-lg overflow-hidden border-2 border-primary cursor-pointer">
+<img alt="Thumbnail 1" class="w-full h-full object-cover" data-alt="Front view detail of wool overcoat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOBtdXWvasqsExjJgQNF4UkHmOgnlFE_76biqEztvAPvRmRZe_MjJi8V_1yv5uDoNktT7YFbJSYXdZV8qr1iqBXfZ1vLFtTtuWbk4vpuVCO-yLFcCAiNU-gshcAm18ZkaaWT_39JJBhoFbtGe1A6x881XifXbvGNhXVBsManKlut8akZE5ddy5HqTe8-5VIl6MbQSZM3mAV__2AQMqFqtAY_4Yy6tb0Kh2DJfVaggliEzym96m-_GEpA2igpspcvcyeXr2Xj2uaw"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 2" class="w-full h-full object-cover" data-alt="Back view of tailored wool overcoat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVoOCjFuavp3GdtK4B7Z4VuVph0ZXqt9tXxh1KIWr5yCK-K9CmbajlDPmySV353wziNY1uowgX_418-Xdi2m1rF27iClBaIj6fIY6P03hN-z1RIa_TLrArEUAMEaNUMJPnwSo3_7heqpuH3Tqd7h3PqPdrA2rzTvxH4N9Iv8lLLTCrXzE3tA0KVk_F222Eld2XfAH5mkhKFDoPkXBkxcTg4oLCu7KC1pi-gUVA7jcgehbATjubtYLBVP7JOWXXtTdgt0ByAxLMsWM"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 3" class="w-full h-full object-cover" data-alt="Fabric texture close up of wool coat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOBAj3tFbuNcuA4R-7CukoscFA8kvIG3IgzZntLOcMEKOdkuWaWdZdM0jKqB50uKLf7OzehgDQA5p_Wj1q_uQvQN062AqOgFUE3J7NZHt8gYiHyae3qzNj88whewA1ibIIHTOpJn0PaBjIq92_TWbdLTm6TzbswGwH8UHdluH5NJM1a1q7IyLsBJcr3jB8nqpX9MCnamM3rUx_QG-4lszA6-Z67pDu_5WagnJUxHlfYw7Cj7RZaQwOfW8ovL2t2VHYmu6_dReekUU"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Thumbnail 4" class="w-full h-full object-cover" data-alt="Model lifestyle shot wearing navy overcoat" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX5Db6a7zM30x0zUG7_b4CT6BkBr8c5d18A5Bj4RfMRCjiyVZ_2x3lZatj8VRrCcUBD0xTHYJaNIh90KThgkxDcL7EmFe0ZMJFdtIDtEE9H9AWrN44biCkCFNrUpVasFqYROzm1eJkQvbh-KAnsF0vOShd3fkgypi7epqxxRSUtUWNrR2FCKb-J8CTzi8NipNcXzINt4X-K8zKtg_JmFEPnxHknvvElsah-VYdcl0nfMJxfsBmUxYepYBiZipe4PYOEiPQpGNxWnw"/>
+</div>
+</div>
+</div>
+<!-- Right: Details -->
+<div class="flex flex-col">
+<div class="mb-8">
+<h2 class="text-4xl md:text-5xl font-display font-bold mb-4 leading-tight">Tailored Wool Overcoat</h2>
+<p class="text-2xl font-light text-slate-600 dark:text-slate-400">$850.00</p>
+</div>
+<p class="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed max-w-lg">
+                    A timeless silhouette crafted from ethically sourced Italian virgin wool. Designed for a structured yet comfortable fit that transcends seasons.
+                </p>
+<!-- Color Selector -->
+<div class="mb-8">
+<span class="block text-sm font-bold uppercase tracking-widest mb-4">Color: <span class="text-slate-400 font-normal">Midnight Black</span></span>
+<div class="flex gap-4">
+<button class="w-8 h-8 rounded-full bg-black ring-2 ring-offset-2 ring-primary ring-offset-background-dark"></button>
+<button class="w-8 h-8 rounded-full bg-[#C19A6B] ring-1 ring-border-dark"></button>
+<button class="w-8 h-8 rounded-full bg-[#1B263B] ring-1 ring-border-dark"></button>
+</div>
+</div>
+<!-- Size Selector -->
+<div class="mb-10">
+<div class="flex justify-between items-center mb-4">
+<span class="text-sm font-bold uppercase tracking-widest">Size</span>
+<a class="text-xs underline text-slate-400 hover:text-primary" href="index.html">Size Guide</a>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="px-6 py-3 rounded border border-border-dark hover:border-primary transition-colors text-sm font-medium">XS</button>
+<button class="px-6 py-3 rounded border border-primary bg-primary/10 text-primary text-sm font-medium">S</button>
+<button class="px-6 py-3 rounded border border-border-dark hover:border-primary transition-colors text-sm font-medium">M</button>
+<button class="px-6 py-3 rounded border border-border-dark hover:border-primary transition-colors text-sm font-medium">L</button>
+<button class="px-6 py-3 rounded border border-border-dark hover:border-primary transition-colors text-sm font-medium">XL</button>
+</div>
+</div>
+<!-- CTA -->
+<div class="flex gap-4 mb-12">
+<button class="flex-1 bg-slate-900 dark:bg-white text-white dark:text-slate-900 py-5 rounded-full font-bold tracking-widest text-sm hover:opacity-90 transition-opacity">
+                        ADD TO BAG
+                    </button>
+<button class="px-5 border border-border-dark rounded-full hover:bg-neutral-dark transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Accordions -->
+<div class="border-t border-border-dark">
+<button class="w-full py-5 flex justify-between items-center border-b border-border-dark group">
+<span class="text-sm font-bold uppercase tracking-wider">Product Details</span>
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">add</span>
+</button>
+<button class="w-full py-5 flex justify-between items-center border-b border-border-dark group">
+<span class="text-sm font-bold uppercase tracking-wider">Materials &amp; Care</span>
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">add</span>
+</button>
+<button class="w-full py-5 flex justify-between items-center border-b border-border-dark group">
+<span class="text-sm font-bold uppercase tracking-wider">Shipping &amp; Returns</span>
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Social Proof: Reviews -->
+<section class="mb-24 py-16 border-t border-border-dark">
+<div class="flex flex-col md:flex-row gap-16">
+<div class="md:w-1/3">
+<h3 class="text-3xl font-display font-bold mb-4">Reviews</h3>
+<div class="flex items-center gap-2 mb-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined text-primary/50">star_half</span>
+</div>
+<span class="text-xl font-bold">4.7</span>
+</div>
+<p class="text-slate-500">Based on 124 reviews</p>
+</div>
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-neutral-dark/30 p-8 rounded-xl italic">
+<p class="text-lg mb-6">"The silhouette is impeccable. It feels like a second skin but with the weight and quality of a legacy piece."</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold text-primary">EB</div>
+<span class="text-sm font-bold not-italic">Eleanor B.</span>
+</div>
+</div>
+<div class="bg-neutral-dark/30 p-8 rounded-xl italic">
+<p class="text-lg mb-6">"Finally found a coat that fits perfectly in the shoulders without being too boxy in the waist."</p>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold text-primary">MK</div>
+<span class="text-sm font-bold not-italic">Marcus K.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recommendations -->
+<section class="pb-24">
+<h3 class="text-2xl font-display font-bold mb-10">You May Also Like</h3>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Item 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-dark mb-4 relative">
+<img alt="Related product 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dark blue cashmere sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTn7aizkmnM0TYhwiygYR4zVCJ7NJpEbFX0GgK27NccgCXHtjgXiQbAhijcHWxZIQWN2K6-OClgCdskuMkx5uCq4eKuc2o2jkNG-qmMoqEov7dY0fARDDePiSCEEOMc0hGFvxRQZcTa5tw-93cbrTDIspD5dYXp0xHslqaZwzY-ukRyPmsuKo76L_PLgpemdKy5HwWn-lhKKQyxMbAjJ2Q5r-rZArheHrv-DrVxCspbUJY8ZZoqRqnNp4mDQ7m20X317IbPR0qeoA"/>
+<button class="absolute top-4 right-4 p-2 bg-white/10 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</button>
+</div>
+<h4 class="font-medium text-sm mb-1">Cashmere Crew Neck</h4>
+<p class="text-slate-500 text-sm font-display">$340.00</p>
+</div>
+<!-- Item 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-dark mb-4 relative">
+<img alt="Related product 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Straight leg wool trousers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAj3BLl-mGZRZMOyInpX7fGI-VYyhv8Gw1FDVM7rGDDNhDEpuijadm93ykhQ5YIVoA6j2d-4le7o7IIa3pFVtKbj-9Krz8sHNH6wDMNJ-V9z96mAafl_jyZEfL9rEeVJLjb7gAprn-CAB39UKQsMR4RBqdJMK0SYoUAbobTWLTBU8fC6MeuBAevrkMjnsmyk4pvNGgSBeSxb2P9VmwHFQVqA0nvjv7tsONAlhk3egxjyZtWPrFsILZqNhS5cXUbH8fyEQfR-FFMZtk"/>
+<button class="absolute top-4 right-4 p-2 bg-white/10 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</button>
+</div>
+<h4 class="font-medium text-sm mb-1">Straight Leg Trouser</h4>
+<p class="text-slate-500 text-sm font-display">$290.00</p>
+</div>
+<!-- Item 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-dark mb-4 relative">
+<img alt="Related product 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Handcrafted leather Chelsea boots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy5mGFyIgxBqZBu3nstbBpzeSGLENjnxZ94P8DcRkTHTX2EKWAF1sB3UtZjMIx6vqb3A9dyFpNS_-NVWu6x7DJclSyV7R5Cihy-qJTZjjlEyLLQliCcfd8jkj_dWPAc6LhAcKKZPd8SIJmdNGFYccR5K9FdJm1rqggKYvUbrVjslyKPKmMkYUZ4bNegrvGLKuFm1wSDsIU0hU_QYEWnMhIreqCTU-ETCExmJX8gPKT7tfLrC5gOCgr8WYish_djJ2moWFNb7QRaao"/>
+<button class="absolute top-4 right-4 p-2 bg-white/10 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</button>
+</div>
+<h4 class="font-medium text-sm mb-1">Chelsea Leather Boot</h4>
+<p class="text-slate-500 text-sm font-display">$420.00</p>
+</div>
+<!-- Item 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-dark mb-4 relative">
+<img alt="Related product 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Merino wool scarf in camel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3ifVQkal_uJRIiWjv-qHECguLzDCTXObV_Cit_E5v6Z_VaQQ1gvn8a354M6aJhl9803Jv-1tYly1L9X6kezqdHIYJ_Ot1hu2PG2dkfSxINCRLQDvVc2lPDVVB1k4bgu4eiJT0FfC-E3zSJDHIPCFTty2XqZm1AFLOjMX9nvs7hrcYrK-aalQ4ngB17HF1bAwZcM6DA_d83IMCQyWs_SReqhpTnGCDFLvG73Ou7hLG5e-0EYxGhKeOxf9Fyz8jBm2O3aeKImSj5es"/>
+<button class="absolute top-4 right-4 p-2 bg-white/10 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">favorite</span>
+</button>
+</div>
+<h4 class="font-medium text-sm mb-1">Essential Ribbed Scarf</h4>
+<p class="text-slate-500 text-sm font-display">$120.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-neutral-dark/20 border-t border-border-dark py-12 px-20">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-primary grayscale opacity-50">
+<span class="material-symbols-outlined">diamond</span>
+<span class="font-bold tracking-tight">LUXE</span>
+</div>
+<div class="flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-500">
+<a class="hover:text-primary" href="index.html">Contact</a>
+<a class="hover:text-primary" href="index.html">Returns</a>
+<a class="hover:text-primary" href="index.html">Privacy</a>
+<a class="hover:text-primary" href="index.html">Terms</a>
+</div>
+<p class="text-xs text-slate-500">© 2024 LUXE ATELIER. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+</body></html>

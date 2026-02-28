@@ -1,0 +1,264 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#144bb8",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+<h2 class="text-xl font-bold leading-tight tracking-tight uppercase">LUXE</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="shop.html">Collections</a>
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="index.html">About</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="index.html">Journal</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="index.html">Stores</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center bg-primary/5 rounded-lg px-3 py-1.5 border border-primary/10">
+<span class="material-symbols-outlined text-primary/60 text-xl">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 placeholder:text-slate-400" placeholder="Search..." type="text"/>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/5 hover:bg-primary/10 text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">person</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[80vh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 scale-105" data-alt="Sun drenched Milanese fashion atelier with marble floors" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS_ZxKABwe_zyLxfq5bvpNI5IhuChZJjQZMoICJeRnoqNoNC6jiY66Vfn_DLisB002l6HMmFncFXsw5FEhM-xGe8W6VpGQYBUU1uuCit0LWYLdUN5mT9ndtKSZ20x1JaPl2fdynnrPSZLy4RKFxdMnl1jY_eyGTYhQMAj1pZ9GHp7N2wWuDFva5pa2-EwLgnvPIjg8At4U6hVkuchGVQ2Y8MMCImEM6ty6jmT2lwCwERoR9ErrtMuCTDfGutEl4Lzq2p5W9N3ytBo');">
+</div>
+<div class="relative z-10 text-center text-white px-4">
+<p class="uppercase tracking-[0.4em] text-sm mb-6 opacity-90">Est. 2015 — Milano</p>
+<h1 class="text-6xl md:text-8xl font-display italic font-light leading-tight mb-8">Our Story</h1>
+<div class="w-px h-24 bg-white/40 mx-auto"></div>
+</div>
+</section>
+<!-- Brand Story Section (Asymmetrical) -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[3/4] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover grayscale" data-alt="Black and white portrait of a master tailor working on a bespoke garment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPRlHwMilE6Bu3TO6w-X29Z-R-0-1tEs6VhhP6kwV2vy8SlJU9V1vRzIaam_MihSQ07jYWo5Ekqg4ydFq_LkLjCcJguy5mbtZlXnszOeguu6SlBhPgIHZAddrpLtavLtMB8LFlYqnvSCt5MIKMsTqCLG8G6Hkm9t2XubijN-l80jgx-p6SNhJh-P9YLbKNGQNmZwkb1LXK_k5ei4B3DPVRN86C_vyqSWZ6_jKFS5EfIQEWJeTZvxaA6oj_pVjzJG6mkieLGLJ_7dw"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border-primary/20 border-8 rounded-xl -z-10 hidden lg:block"></div>
+</div>
+<div class="md:col-span-7 space-y-8">
+<h2 class="text-4xl md:text-5xl font-display font-bold leading-tight text-slate-900 dark:text-slate-100">
+                        Crafted with Purpose
+                    </h2>
+<div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+<p>
+                            Founded in 2015, LUXE began as a small, intimate studio in the heart of Milan with a single, uncompromising vision: to redefine modern elegance through the lens of traditional Italian craftsmanship.
+                        </p>
+<p>
+                            Our journey started with a group of artisans who believed that true luxury shouldn't just be seen—it should be felt. Every stitch we place tells a story of dedication, and every garment we create is a testament to the hands that shaped it. We don't just design clothes; we preserve a legacy.
+                        </p>
+</div>
+<div class="pt-4">
+<button class="group flex items-center gap-4 text-primary font-bold tracking-widest uppercase text-sm">
+                            Learn about our artisans
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Values Section -->
+<section class="bg-primary/5 dark:bg-primary/10 py-24">
+<div class="max-w-7xl mx-auto px-6 md:px-20">
+<div class="text-center mb-16 space-y-4">
+<h3 class="text-3xl font-display font-bold">Our Core Pillars</h3>
+<div class="w-12 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col items-center text-center p-8 bg-background-light dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 font-thin">draw</span>
+<h4 class="text-xl font-bold mb-4 uppercase tracking-wider">Exceptional Craftsmanship</h4>
+<p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Utilizing centuries-old techniques passed down through generations, ensuring every piece is a masterpiece of precision.
+                        </p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-background-light dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 font-thin">eco</span>
+<h4 class="text-xl font-bold mb-4 uppercase tracking-wider">Sustainable Luxury</h4>
+<p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Committed to ethical sourcing and reducing our environmental footprint through conscious production and material selection.
+                        </p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-background-light dark:bg-background-dark rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<span class="material-symbols-outlined text-primary text-5xl mb-6 font-thin">indeterminate_question_box</span>
+<h4 class="text-xl font-bold mb-4 uppercase tracking-wider">Timeless Design</h4>
+<p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Creating pieces that transcend seasonal trends, designed to be cherished for a lifetime and passed down to future generations.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Atelier Section (Reversed Layout) -->
+<section class="max-w-7xl mx-auto px-6 md:px-20 py-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 order-2 md:order-1 space-y-8">
+<h2 class="text-4xl md:text-5xl font-display font-bold leading-tight text-slate-900 dark:text-slate-100">
+                        The Design Process
+                    </h2>
+<div class="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+<p>
+                            From the selection of the finest Italian wools to the final fitting, our process is an intimate dialogue between the designer and the raw material. 
+                        </p>
+<p>
+                            We source only the highest grade natural fibers—silk from Como, cashmere from the Biella region, and wool that feels like a second skin. Each season begins with a sensory exploration of texture and weight, ensuring our materials meet the LUXE standard of excellence.
+                        </p>
+</div>
+<div class="flex items-center gap-12 pt-4">
+<div class="text-center">
+<span class="block text-2xl font-bold text-primary italic">100%</span>
+<span class="text-xs uppercase tracking-widest opacity-60">Natural Fibers</span>
+</div>
+<div class="text-center">
+<span class="block text-2xl font-bold text-primary italic">Milan</span>
+<span class="text-xs uppercase tracking-widest opacity-60">Design Studio</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 order-1 md:order-2">
+<div class="aspect-square rounded-full overflow-hidden border-8 border-primary/5 shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Detailed close-up of rich navy blue Italian wool fabric texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbSpmGuXw1ErfKhImVfDRnILIZ9YSxqOj9s7jpwf1GKTuXmNShj8Bm2ED_AolG7iSWDLT_cQgJJtnjEb5xFOy-xysFEUQ-7t2PNJ5FoDEsVwTsfjkiHRd7Udtb5AAx54n8vNNgevkUuhk7UPBJGgO4Vz0vdPRolnsB9ET1UMBtYNPdNLskj6Rcklw4Mruzl92QTeK9xeBI16o63ykXrM_ddvpJNYQUKUuUe_IJIvSA6qWdi54w0Q4SHRSNF01Vvo46RVIp7_wQLKs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Founder Quote -->
+<section class="py-24 border-y border-primary/10">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<span class="material-symbols-outlined text-primary/30 text-6xl mb-6">format_quote</span>
+<blockquote class="text-3xl md:text-4xl font-display italic leading-relaxed text-slate-800 dark:text-slate-200 mb-12">
+                    "Luxury is not about excess. It's about the quiet confidence of quality and the emotional resonance of a garment that was made specifically with your story in mind."
+                </blockquote>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full overflow-hidden mb-4 grayscale">
+<img class="w-full h-full object-cover" data-alt="Minimalist portrait of the Creative Director" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBlvXixukWNGmGhRyVxaqSnL3yiE2DmIvZ_N-8SduZU-MlmP2ZIUT7C-ow4ZRUutj2tHQF2bhvXH8QKxPmtw5_BY6DRXKTMLLTk5gFID3824DN7P62Caqno4eQXoM_FiqDH-VKYBGhlsptARu2h7h5Cj_bCPxxX2x5KOMsCOofPaOsKtO6riKHw_jp4CdeqG_TIbcVBYmKfGppdU_VCle394V9Ck2vJwiDo9UDjk0ffj34vMj9PeWNUtop2cR80XBIh4QY0UiWLHw"/>
+</div>
+<h5 class="text-lg font-bold tracking-widest uppercase">Marco Valenti</h5>
+<p class="text-sm text-primary opacity-70">Creative Director &amp; Founder</p>
+<div class="mt-4 font-display italic text-2xl opacity-40">M. Valenti</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-6 md:px-20">
+<div class="bg-background-dark dark:bg-primary/20 rounded-2xl p-12 md:p-20 flex flex-col items-center text-center relative overflow-hidden">
+<!-- Background decorative element -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-primary/10 rounded-full -ml-24 -mb-24"></div>
+<h2 class="text-4xl md:text-5xl font-display font-bold text-white mb-8 z-10">Explore Our Collections</h2>
+<p class="text-white/70 text-lg mb-10 max-w-xl z-10">
+                    Discover the latest pieces from our seasonal atelier collections, where tradition meets contemporary silhouette.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 z-10">
+<button class="bg-white text-background-dark hover:bg-primary hover:text-white transition-all duration-300 font-bold px-10 py-4 rounded-lg tracking-widest text-sm">
+                        SHOP NOW
+                    </button>
+<button class="border border-white/30 text-white hover:bg-white/10 transition-all duration-300 font-bold px-10 py-4 rounded-lg tracking-widest text-sm">
+                        VIEW JOURNAL
+                    </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-light dark:bg-background-dark pt-20 pb-10 border-t border-primary/10">
+<div class="max-w-7xl mx-auto px-6 md:px-20 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+<div class="space-y-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">diamond</span>
+<h2 class="text-xl font-bold uppercase tracking-tight">LUXE</h2>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                        Redefining modern luxury through timeless Italian craftsmanship and sustainable innovation.
+                    </p>
+</div>
+<div>
+<h6 class="font-bold text-sm uppercase tracking-widest mb-6">Explore</h6>
+<ul class="space-y-4 text-sm font-light text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="shop.html">Collections</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Bespoke Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Atelier</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-sm uppercase tracking-widest mb-6">Service</h6>
+<ul class="space-y-4 text-sm font-light text-slate-600 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="index.html">Shipping</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="index.html">Stores</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-bold text-sm uppercase tracking-widest mb-6">Stay Connected</h6>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="index.html">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="index.html">
+<span class="material-symbols-outlined text-xl">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="index.html">
+<span class="material-symbols-outlined text-xl">mail</span>
+</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-20 text-center text-xs text-slate-400 dark:text-slate-600 font-light uppercase tracking-widest">
+                © 2024 LUXE Milano. All rights reserved.
+            </div>
+</footer>
+</div>
+
+```</body></html>
